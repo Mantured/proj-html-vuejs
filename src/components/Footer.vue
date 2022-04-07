@@ -4,10 +4,9 @@
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Header",
+  props: {},
 };
 </script>
 

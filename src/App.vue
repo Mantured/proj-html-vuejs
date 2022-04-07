@@ -1,16 +1,40 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Header />
+    <!-- OPTION A -->
+    <!-- top header: nav + logo -->
+    <!-- bottom header: 2 col txt left img right + icon price in absolut left  -->
+    <!-- OPTION B  -->
+    <!-- bottom header = jumbotron with same background image -->
+    <Jumbotron />
+    <!-- Awarding  Pro Barbers  -->
+    <Main />
+    <!-- services 
+    static obj 
+    and 
+    products
+    a single component? try it 
+    + product months featured absolut?  -->
+    <!-- reviews  and Posts -->
+    <Footer />
+    <!-- footer top -->
+    <!-- footer bottom : copyright -->
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
+import Jumbotron from "./components/Jumbotron.vue";
+import Main from "./components/Main.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Header,
+    Jumbotron,
+    Main,
+    Footer,
   },
 };
 </script>
