@@ -27,6 +27,9 @@ import Header from "./components/Header.vue";
 import Jumbotron from "./components/Jumbotron.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
+//Font
+import "@fontsource/abril-fatface"; // Defaults to weight 400.
+import "@fontsource/lato"; // Defaults to weight 400.
 
 export default {
   name: "App",
@@ -42,7 +45,8 @@ export default {
 <style lang="scss">
 @import "./assets/scss/style.scss";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+
 #app {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 </style>

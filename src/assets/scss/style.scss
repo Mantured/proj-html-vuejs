@@ -2,19 +2,29 @@
 // import Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abril Fatface";
+  color: #ffffff;
+}
+
 .my-btn-style {
   font-size: 18px;
   line-height: 21px;
   color: $Goldenrod;
   /* border-color: $OrangLine; */
   padding: 17px 40px;
+  text-transform: uppercase;
   border: 1px solid $Goldenrod;
+  &:hover {
+    border-color: $Pizazz;
+    color: $Pizazz;
+  }
 }
 
-img {
-  /* height: 100%; */
-}
-
-h1 {
-  color: #ffffff;
+.text-paragraph {
+  @include textParagraph;
 }

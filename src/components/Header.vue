@@ -10,7 +10,7 @@
         </div>
         <div class="col text-end align-self-center">
           <i class="fas fa-shopping-cart me-3"></i>
-          <i class="fal fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
           <!-- div interim -->
           <div class="separator"></div>
           <p>The Pinnacle of Male Grooming</p>
-          <button class="btn my-btn-style">LEARN MORE</button>
+          <button class="btn my-btn-style">learn more</button>
         </div>
         <div class="col-6 h-100">
           <img
@@ -51,6 +51,7 @@ export default {
 section.header-wrapper {
   height: 100vh;
   background-size: cover;
+  background-position: center;
   background-image: url(../assets/images/Header-Jumbo/avadabarbers-homepage-hero-bg.jpg);
   div.heder-top {
     line-height: 120px;
@@ -65,9 +66,9 @@ section.header-wrapper {
     h1 {
       font-size: 5.5rem;
     }
-    .separator {
+    div.separator {
       border: 0.4px solid $Goldenrod;
-      width: 20%;
+      width: 16rem;
     }
     p {
       font-size: 1.5rem;
