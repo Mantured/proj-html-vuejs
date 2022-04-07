@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss">
 @import "./assets/scss/style.scss";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 #app {
   font-family: Helvetica, Arial, sans-serif;
 }
