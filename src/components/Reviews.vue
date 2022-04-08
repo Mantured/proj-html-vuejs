@@ -1,6 +1,6 @@
 <template>
   <section class="best-product-reviews">
-    <div class="months-product container">
+    <div class="months-product container mb-5">
       <div
         class="row product"
         v-for="(product, index) in bestProduct"
@@ -19,6 +19,33 @@
           <h3>{{ product.title }}</h3>
           <p>{{ product.description }}</p>
           <button class="btn my-btn-style">buy now</button>
+        </div>
+      </div>
+    </div>
+    <div class="reviews centralize-container">
+      <div class="row centralize-paragraph">
+        <div class="col-6 text-paragraph mb-4">
+          <h5>what people say</h5>
+          <h3>reviews</h3>
+        </div>
+        <div class="col-12">
+          <ul class="reviews-list">
+            <li v-for="(review, index) in reviews" :key="index">
+              <div>
+                <p class="">
+                  {{ review.review }}
+                </p>
+                <img
+                  :src="
+                    require(`@/assets/images/Reviews/${review.customerImage}`)
+                  "
+                  class="img-fluid rounded-circle"
+                  :alt="`icon of ${review.customerName}`"
+                />
+                <span class="">{{ review.customerName }}</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -68,6 +95,32 @@ export default {
           statusReview: false,
         },
       ],
+      reviews: [
+        {
+          customerImage: "avadabarbers-trimcut-gallery6.jpg",
+          customerName: "Jhon Doe",
+          review:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis eleifend ante ut sagittis. Sed sodales, urna et imperdiet placerat, ex nisi aliquam orci, ac varius odio libero et arcu.",
+        },
+        {
+          customerImage: "avadabarbers-trimcut-gallery7.jpg",
+          customerName: "Pete Jones",
+          review:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis eleifend ante ut sagittis. Sed sodales, urna et imperdiet placerat, ex nisi aliquam orci, ac varius odio libero et arcu.",
+        },
+        {
+          customerImage: "avadabarbers-trimcut-gallery3.jpg",
+          customerName: "Mark Wilson",
+          review:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis eleifend ante ut sagittis. Sed sodales, urna et imperdiet placerat, ex nisi aliquam orci, ac varius odio libero et arcu.",
+        },
+        /* {
+          customerImage: "avadabarbers-trimcut-gallery3.jpg",
+          customerName: "Manuel Gerolin",
+          review:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis eleifend ante ut sagittis. Sed sodales, urna et imperdiet placerat, ex nisi aliquam orci, ac varius odio libero et arcu.",
+        }, */
+      ],
     };
   },
 };
@@ -75,34 +128,60 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/style.scss";
-.product {
-  width: 50vw;
-  height: 40vh;
-  bottom: 40px;
-  display: none;
-  margin: 0 auto;
-  position: relative;
-  align-items: center;
-  border-top: 3px solid $Goldenrod;
-  &.active {
-    display: flex;
-  }
-  .product-image {
-    height: 100%;
-    background-image: url(../assets/images/avadabarbers-cta-background.jpg);
-    background-size: cover;
-    background-position: center;
-    img {
+div.months-product {
+  .product {
+    width: 50vw;
+    height: 40vh;
+    bottom: 40px;
+    display: none;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    border-top: 3px solid $Goldenrod;
+    &.active {
+      display: flex;
+    }
+    .product-image {
       height: 100%;
-      object-fit: contain;
+      background-image: url(../assets/images/avadabarbers-cta-background.jpg);
+      background-size: cover;
+      background-position: center;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .product-description {
+      height: 100%;
+      padding: 2rem 4.5rem;
+      background-color: $ColdGrey;
+      p {
+        color: $Emperor;
+      }
     }
   }
-  .product-description {
-    height: 100%;
-    padding: 2rem 4.5rem;
-    background-color: $ColdGrey;
-    p {
-      color: $Emperor;
+}
+div.reviews {
+  width: 50vw;
+  ul.reviews-list {
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      list-style-type: none;
+      div {
+        padding: 2.46rem;
+        img {
+          width: 30%;
+          margin-bottom: 1rem;
+        }
+        p {
+          /* width: 70%; */
+        }
+        span {
+          display: block;
+          color: $Driftwood;
+        }
+      }
     }
   }
 }
