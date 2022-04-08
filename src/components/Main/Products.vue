@@ -68,12 +68,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "../assets/scss/style.scss";
+@import "/src/assets/scss/style.scss";
 section.products {
   padding-bottom: 5rem;
   background-size: cover;
   background-position: center;
-  background-image: url(../assets/images/Products/avadabarbers-reviewsbackground.jpg);
+  background-image: url(/src/assets/images/Products/avadabarbers-reviewsbackground.jpg);
   .centralize-paragraph {
     height: 100vh;
     ul.products-list {

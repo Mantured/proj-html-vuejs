@@ -24,7 +24,7 @@
     </div>
     <div class="reviews centralize-container">
       <div class="row centralize-paragraph">
-        <div class="col-6 text-paragraph mb-4">
+        <div class="col-6 text-paragraph mb-1">
           <h5>what people say</h5>
           <h3>reviews</h3>
         </div>
@@ -127,7 +127,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/style.scss";
+@import "/src/assets/scss/style.scss";
 div.months-product {
   .product {
     width: 50vw;
@@ -143,7 +143,7 @@ div.months-product {
     }
     .product-image {
       height: 100%;
-      background-image: url(../assets/images/avadabarbers-cta-background.jpg);
+      background-image: url(/src/assets/images/avadabarbers-cta-background.jpg);
       background-size: cover;
       background-position: center;
       img {
@@ -169,13 +169,14 @@ div.reviews {
     li {
       list-style-type: none;
       div {
-        padding: 2.46rem;
+        padding: 0 2rem;
+        p {
+          color: $Gunsmoke;
+          margin-bottom: 1rem;
+        }
         img {
           width: 30%;
           margin-bottom: 1rem;
-        }
-        p {
-          /* width: 70%; */
         }
         span {
           display: block;

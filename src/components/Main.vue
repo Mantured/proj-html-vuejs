@@ -15,13 +15,15 @@
     </svg>
     <Products />
     <Reviews />
+    <BlogPosts />
   </main>
 </template>
 
 <script>
-import Services from "./Services.vue";
-import Products from "./Products.vue";
-import Reviews from "./Reviews.vue";
+import Services from "./Main/Services.vue";
+import Products from "./Main/Products.vue";
+import Reviews from "./Main/Reviews.vue";
+import BlogPosts from "./Main/BlogPosts.vue";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Main",
@@ -29,6 +31,7 @@ export default {
     Services,
     Products,
     Reviews,
+    BlogPosts,
   },
   data: function () {
     return {};
