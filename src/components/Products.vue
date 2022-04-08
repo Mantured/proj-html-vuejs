@@ -1,8 +1,7 @@
 <template>
-  <!-- valutare il caso di creare due component diversi services product-->
-  <main>
-    <Services />
-    <!-- <div class="services container">
+  <!-- <section class="container-fluid"> -->
+  <section class="container-fluid">
+    <div class="products container">
       <div class="row centralize-paragraph">
         <div class="col-6 text-paragraph">
           <h5>mens grooming</h5>
@@ -31,34 +30,14 @@
           <button class="btn my-btn-style">read about our services</button>
         </div>
       </div>
-    </div> -->
-    <svg
-      class="fusion-big-triangle-candy mt-4"
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      width="100%"
-      height="100"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-      style="fill: $coldGrey; padding: 0"
-    >
-      <path d="M0 100 L50 2 L100 100 Z"></path>
-    </svg>
-    <Products />
-  </main>
+    </div>
+  </section>
 </template>
 
 <script>
-import Services from "./Services.vue";
-import Products from "./Products.vue";
 export default {
-  components: { Services },
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Main",
-  component: {
-    Services,
-    Products,
-  },
+  name: "Products",
   data: function () {
     return {};
   },
