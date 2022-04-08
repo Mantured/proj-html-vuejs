@@ -1,6 +1,6 @@
 <template>
-  <section class="header-wrapper container-fluid">
-    <div class="heder-top container">
+  <section class="header-wrapper">
+    <div class="header-top">
       <div class="row">
         <div class="col-3">
           <img
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="header-bottom container">
+    <div class="header-bottom">
       <div class="row h-100">
         <div
           class="col d-flex flex-column justify-content-center align-items-start"
@@ -53,7 +53,14 @@ section.header-wrapper {
   background-size: cover;
   background-position: center;
   background-image: url(../assets/images/Header-Jumbo/avadabarbers-homepage-hero-bg.jpg);
-  div.heder-top {
+  div.header-top,
+  div.header-bottom {
+    width: 70vw;
+    margin: 0 auto;
+  }
+  div.header-top {
+    /* width: 70vw;
+    margin: 0 auto; */
     line-height: 120px;
     i {
       color: #ffffff;
@@ -61,6 +68,8 @@ section.header-wrapper {
     }
   }
   div.header-bottom {
+    /* width: 70vw;
+    margin: 0 auto; */
     height: 85%;
     line-height: 85px;
     h1 {

@@ -1,7 +1,7 @@
 <template>
   <!-- <section class="container-fluid"> -->
-  <section class="services container-fluid">
-    <div class="container">
+  <section class="services">
+    <div class="centralize-container">
       <div class="row centralize-paragraph">
         <div class="col-6 text-paragraph">
           <h5>mens grooming</h5>
@@ -62,7 +62,7 @@ export default {
         },
         {
           image: "avadabarbers-washndry-icon.png",
-          title: "wash &dry",
+          title: "wash & dry",
           description:
             "Take a seat in our fine leather chairs, lean back and let us lather you a fresh head in a luxurious fashion",
         },

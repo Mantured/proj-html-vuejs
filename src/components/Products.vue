@@ -1,7 +1,7 @@
 <template>
   <!-- <section class="container-fluid"> -->
-  <section class="products container-fluid">
-    <div class="container">
+  <section class="products">
+    <div class="centralize-container">
       <div class="row centralize-paragraph">
         <div class="col text-paragraph">
           <h5>we have you covered</h5>
@@ -24,7 +24,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6">
+        <div class="col-6 align-self-start">
           <button class="btn my-btn-style">shop our product range</button>
         </div>
       </div>
@@ -70,11 +70,12 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/style.scss";
 section.products {
+  padding-bottom: 5rem;
   background-size: cover;
   background-position: center;
   background-image: url(../assets/images/Products/avadabarbers-reviewsbackground.jpg);
   .centralize-paragraph {
-    height: 90vh;
+    height: 100vh;
     ul.products-list {
       display: flex;
       justify-content: space-evenly;
@@ -85,11 +86,10 @@ section.products {
           margin-bottom: 1rem;
         }
         .text-body {
-          width: 250px;
           h3 {
             color: $Driftwood;
-            text-transform: capitalize;
             margin-bottom: 2rem;
+            text-transform: capitalize;
           }
           p {
             color: $Pizazz;

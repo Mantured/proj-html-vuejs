@@ -54,3 +54,8 @@ $StarkWhite: #e9dac4;
     justify-content: space-around;
   } */
 }
+
+@mixin centralizeContainer {
+  width: 70vw;
+  margin: 0 auto;
+}
