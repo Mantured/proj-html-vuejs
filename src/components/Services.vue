@@ -1,7 +1,7 @@
 <template>
   <!-- <section class="container-fluid"> -->
-  <section class="container-fluid">
-    <div class="services container">
+  <section class="services container-fluid">
+    <div class="container">
       <div class="row centralize-paragraph">
         <div class="col-6 text-paragraph">
           <h5>mens grooming</h5>
@@ -82,7 +82,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../assets/scss/style.scss";
-div.services {
+section.services {
   .centralize-paragraph {
     height: 90vh;
     ul.services-list {

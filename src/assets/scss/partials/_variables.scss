@@ -26,6 +26,7 @@ $StarkWhite: #e9dac4;
 
 @mixin textParagraph {
   h5 {
+    margin-top: 1.5rem;
     font-size: 1rem;
     color: $Driftwood;
     font-family: "Lato";
@@ -35,6 +36,7 @@ $StarkWhite: #e9dac4;
     font-size: 4rem;
     color: $SilverChalice;
     margin-bottom: 1.5rem;
+    text-transform: capitalize;
   }
 }
 

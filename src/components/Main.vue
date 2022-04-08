@@ -40,7 +40,7 @@
       height="100"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
-      style="fill: $coldGrey; padding: 0"
+      style="fill: #121315; padding: 0"
     >
       <path d="M0 100 L50 2 L100 100 Z"></path>
     </svg>

@@ -1,7 +1,7 @@
 <template>
   <!-- <section class="container-fluid"> -->
-  <section class="container-fluid">
-    <div class="products container">
+  <section class="products container-fluid">
+    <div class="container">
       <div class="row centralize-paragraph">
         <div class="col text-paragraph">
           <h5>we have you covered</h5>
@@ -18,16 +18,14 @@
                 />
                 <div class="text-body">
                   <h3 class="">{{ product.title }}</h3>
-                  <p class="">
-                    {{ product.price }}
-                  </p>
+                  <p class="">&dollar; {{ product.price }}</p>
                 </div>
               </div>
             </li>
           </ul>
         </div>
         <div class="col-6">
-          <button class="btn my-btn-style"></button>
+          <button class="btn my-btn-style">shop our product range</button>
         </div>
       </div>
     </div>
@@ -71,7 +69,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../assets/scss/style.scss";
-div.products {
+section.products {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/images/Products/avadabarbers-reviewsbackground.jpg);
   .centralize-paragraph {
     height: 90vh;
     ul.products-list {
@@ -91,7 +92,7 @@ div.products {
             margin-bottom: 2rem;
           }
           p {
-            color: $SilverChalice;
+            color: $Pizazz;
           }
         }
       }
