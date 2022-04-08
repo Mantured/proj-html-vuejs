@@ -1,7 +1,7 @@
 <template>
   <section class="jumbotron container-fluid">
     <div class="container">
-      <div class="row">
+      <div class="row centralize-paragraph">
         <div class="col-6 text-paragraph">
           <h5>award winning</h5>
           <h3>Pro Barbers</h3>
@@ -36,25 +36,12 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/style.scss";
 section.jumbotron {
-  height: 564px;
+  height: 560px;
   background-size: cover;
   background-image: url(../assets/images/Header-Jumbo/avadabarbers-about-introbackground.jpg);
   /* can we used that for every phara? */
   div.container {
     height: 82.2%;
-    /* text-align: center; */
-    .row {
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      .col-6 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 200px;
-      }
-    }
   }
 }
 </style>

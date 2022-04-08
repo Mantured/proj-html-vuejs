@@ -14,11 +14,11 @@ h6 {
 .my-btn-style {
   font-size: 18px;
   line-height: 21px;
-  color: $Goldenrod;
+  color: $Driftwood;
   /* border-color: $OrangLine; */
   padding: 17px 40px;
   text-transform: uppercase;
-  border: 1px solid $Goldenrod;
+  border: 1px solid $Driftwood;
   &:hover {
     border-color: $Pizazz;
     color: $Pizazz;
@@ -27,4 +27,8 @@ h6 {
 
 .text-paragraph {
   @include textParagraph;
+}
+
+.centralize-paragraph {
+  @include centralizeParagraph;
 }

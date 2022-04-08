@@ -1,17 +1,54 @@
-$Pizazz: #fb8d05;
-$Goldenrod: #ffcf6a;
+//? Color cube
+$White: #ffffff;
+$ColdGrey: #111110;
 $Emperor: #505050;
 $SilverChalice: #b0b0b0;
+$Thunderbird: #ae1827;
+$Driftwood: #ae8652;
+$FunBlue: #1a50ae;
+$HavelockBlue: #509ae1;
+$Pizazz: #fb8d05;
+$Goldenrod: #ffcf6a;
+
+//? Median cut
+$Ebb: #eae8e6;
+$ColdBlack: #191817;
+$Flint: #69625c;
+$Gunsmoke: #88928f;
+$KashmirBlue: #4f659a;
+
+//? Material deesign
+$MediumCarmine: #ae8267;
+$Teak: #191817;
+$PickledBean: #65401e;
+$MineShaft: #353333;
+$StarkWhite: #e9dac4;
 
 @mixin textParagraph {
   h5 {
     font-size: 1rem;
-    color: $Goldenrod;
+    color: $Driftwood;
     font-family: "Lato";
     text-transform: uppercase;
   }
   h3 {
     font-size: 4rem;
     color: $SilverChalice;
+    margin-bottom: 1.5rem;
   }
+}
+
+@mixin centralizeParagraph {
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  /* div[class*="col"] {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+  } */
 }

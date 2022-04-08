@@ -67,7 +67,7 @@ section.header-wrapper {
       font-size: 5.5rem;
     }
     div.separator {
-      border: 0.4px solid $Goldenrod;
+      border: 0.4px solid $Driftwood;
       width: 16rem;
     }
     p {
