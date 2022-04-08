@@ -33,7 +33,7 @@
       </div>
     </div> -->
     <svg
-      class="fusion-big-triangle-candy mt-4"
+      class="fusion-big-triangle-candy mt-5"
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       width="100%"
@@ -52,10 +52,9 @@
 import Services from "./Services.vue";
 import Products from "./Products.vue";
 export default {
-  components: { Services },
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Main",
-  component: {
+  components: {
     Services,
     Products,
   },
