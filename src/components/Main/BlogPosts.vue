@@ -14,8 +14,8 @@
     </svg>
     <div class="row centralize-paragraph">
       <div class="col-6 text-paragraph">
-        <h5>mens grooming</h5>
-        <h3>Services</h3>
+        <h5>TALES FROM THE BARBER SHOP</h5>
+        <h3>Recent Blog Posts</h3>
       </div>
       <div class="col-12">
         <ul class="posts-list">
@@ -37,7 +37,7 @@
         </ul>
       </div>
       <div class="col-6">
-        <button class="btn my-btn-style">read more from our blog</button>
+        <button class="my-btn-style">read more from our blog</button>
       </div>
     </div>
   </section>
@@ -81,6 +81,9 @@ section.blog-posts {
     width: 50vw;
     margin: 0 auto;
     padding: 3rem 0;
+    .text-paragraph {
+      width: 100%;
+    }
     ul.posts-list {
       display: flex;
       justify-content: space-evenly;

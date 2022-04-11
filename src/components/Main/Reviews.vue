@@ -18,7 +18,7 @@
           <h5>this months featured product</h5>
           <h3>{{ product.title }}</h3>
           <p>{{ product.description }}</p>
-          <button class="btn my-btn-style">buy now</button>
+          <button class="my-btn-style">buy now</button>
         </div>
       </div>
     </div>

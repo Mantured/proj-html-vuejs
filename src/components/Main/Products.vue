@@ -25,7 +25,7 @@
           </ul>
         </div>
         <div class="col-6 align-self-start">
-          <button class="btn my-btn-style">shop our product range</button>
+          <button class="my-btn-style">shop our product range</button>
         </div>
       </div>
     </div>
@@ -84,6 +84,7 @@ section.products {
         img {
           padding: 1rem;
           margin-bottom: 1rem;
+          scale: 1.2;
         }
         .text-body {
           h3 {

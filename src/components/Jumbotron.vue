@@ -5,7 +5,7 @@
         <div class="col-6 text-paragraph">
           <h5>award winning</h5>
           <h3>Pro Barbers</h3>
-          <button class="btn my-btn-style">meet your new barber</button>
+          <button class="my-btn-style">meet your new barber</button>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@
           <!-- div interim -->
           <div class="separator"></div>
           <p>The Pinnacle of Male Grooming</p>
-          <button class="btn my-btn-style">learn more</button>
+          <button class="my-btn-style">learn more</button>
         </div>
         <div class="col-6 h-100">
           <img

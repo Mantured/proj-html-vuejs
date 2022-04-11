@@ -27,7 +27,7 @@
           </ul>
         </div>
         <div class="col-6">
-          <button class="btn my-btn-style">read about our services</button>
+          <button class="my-btn-style">read about our services</button>
         </div>
       </div>
     </div>
@@ -80,6 +80,7 @@ section.services {
         img {
           padding: 1rem;
           margin-bottom: 1rem;
+          scale: 0.45;
         }
         .text-body {
           width: 250px;
