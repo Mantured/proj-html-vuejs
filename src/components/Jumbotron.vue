@@ -9,6 +9,7 @@
         </div>
       </div>
     </div>
+
     <svg
       class="fusion-big-triangle-candy"
       xmlns="http://www.w3.org/2000/svg"

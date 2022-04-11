@@ -21,11 +21,13 @@
         <ul class="posts-list">
           <li v-for="(post, index) in posts" :key="index">
             <div>
-              <img
-                :src="require(`@/assets/images/Blog-Posts/${post.image}`)"
-                class="img-fluid"
-                :alt="`icon of ${post.title}`"
-              />
+              <div class="img-wrapper">
+                <img
+                  :src="require(`@/assets/images/Blog-Posts/${post.image}`)"
+                  class="img-fluid"
+                  :alt="`icon of ${post.title}`"
+                />
+              </div>
               <div class="text-body">
                 <h3 class="">{{ post.title }}</h3>
                 <p class="">
@@ -89,9 +91,18 @@ section.blog-posts {
       justify-content: space-evenly;
       li {
         list-style-type: none;
-        img {
-          padding: 1rem;
-          margin-bottom: 1rem;
+        .img-wrapper {
+          width: 300px;
+          overflow: hidden;
+          margin: 0 auto;
+          img {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: 0.9s all ease-in-out;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
         .text-body {
           padding: 1rem 3rem;

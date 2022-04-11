@@ -33,6 +33,8 @@
           />
         </div>
       </div>
+      <i class="fab fa-opencart"></i>
+      <i class="fab fa-wpressr"></i>
     </div>
   </section>
 </template>
@@ -61,6 +63,9 @@ section.header-wrapper {
   div.header-top {
     /* width: 70vw;
     margin: 0 auto; */
+    /* position: fixed;
+    left: 50%;
+    transform: translate(-50%); */
     line-height: 120px;
     i {
       color: #ffffff;
@@ -82,6 +87,24 @@ section.header-wrapper {
     p {
       font-size: 1.5rem;
       color: $Emperor;
+    }
+    i {
+      position: fixed;
+      right: 5px;
+      z-index: 3;
+      width: 60px;
+      padding: 0.5rem;
+      font-size: 2rem;
+      text-align: center;
+      color: $KashmirBlue;
+      border-radius: 0.3rem;
+      background-color: white;
+      &.fab.fa-opencart {
+        top: 180px;
+      }
+      &.fab.fa-wpressr {
+        top: 235px;
+      }
     }
   }
 }
