@@ -1,5 +1,5 @@
 <template>
-  <section class="about-us">
+  <section id="about-us">
     <div class="container">
       <div class="row">
         <div class="col-5 text-center">
@@ -65,7 +65,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../assets/scss/style.scss";
-section.about-us {
+section#about-us {
   /* height: 45vh; */
   background-color: $ColdGrey;
   button {

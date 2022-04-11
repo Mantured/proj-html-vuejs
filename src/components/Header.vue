@@ -1,5 +1,5 @@
 <template>
-  <section class="header-wrapper">
+  <section class="header-wrapper relative">
     <div class="header-top">
       <div class="row">
         <div class="col-3">
@@ -10,7 +10,22 @@
         </div>
         <div class="col text-end align-self-center">
           <i class="fas fa-shopping-cart me-3"></i>
-          <i class="fas fa-bars"></i>
+          <!-- <i class="fas fa-bars"></i> -->
+          <div class="collapsible-menu">
+            <input type="checkbox" id="menu" />
+            <label for="menu"><i class="fas fa-bars"></i></label>
+            <div class="menu-content">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li id="about-us-menu"><a href="#about-us">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Our Team</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -64,9 +79,10 @@ section.header-wrapper {
     /* width: 70vw;
     margin: 0 auto; */
     /* position: fixed;
-    left: 50%;
-    transform: translate(-50%); */
+    top: 0;
+    left: 50%; */
     line-height: 120px;
+    /* transform: translateX(-50%); */
     i {
       color: #ffffff;
       font-size: 1.5rem;
@@ -81,20 +97,20 @@ section.header-wrapper {
       font-size: 5.5rem;
     }
     div.separator {
-      border: 0.4px solid $Driftwood;
       width: 16rem;
+      border: 0.4px solid $Driftwood;
     }
     p {
-      font-size: 1.5rem;
       color: $Emperor;
+      font-size: 1.5rem;
     }
     i {
-      position: fixed;
       right: 5px;
-      z-index: 3;
       width: 60px;
+      z-index: 3;
       padding: 0.5rem;
       font-size: 2rem;
+      position: fixed;
       text-align: center;
       color: $KashmirBlue;
       border-radius: 0.3rem;
@@ -108,4 +124,79 @@ section.header-wrapper {
     }
   }
 }
+
+//? collapse menu plus
+.collapsible-menu {
+  background-color: transparent;
+  display: inline;
+}
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.collapsible-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: $Ebb;
+    font-size: 1.5rem;
+  }
+}
+.collapsible-menu label {
+  display: inline;
+  cursor: pointer;
+  /* padding: 10px 0 10px 50px; */
+}
+input#menu {
+  display: none;
+}
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $ColdGrey;
+  filter: opacity(0.6);
+  z-index: 3;
+  line-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transform: translateY(-50%); */
+}
+/* Toggle Effect */
+input:checked ~ label {
+  /*   background-image: url(../assets/images/Hover/times-solid.svg);
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 3; */
+  /* color: $Driftwood; */
+}
+input:checked ~ .menu-content {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+/* #about-us-menu :hover.menu-content {
+  background-image: url(../assets/images/Header-Jumbo/avadabarbers-homepage-hero-bg.jpg);
+  background-size: cover;
+} */
+.collapsible-menu li:hover a {
+  color: $Driftwood;
+}
+/* .collapsible-menu li#about-us-men:hover ~ .menu-content {
+  background-image: url(../assets/images/Header-Jumbo/avadabarbers-homepage-hero-bg.jpg);
+  background-size: cover;
+  height: 100%;
+  background-color: transparent;
+} */
 </style>
