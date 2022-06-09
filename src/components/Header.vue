@@ -1,28 +1,37 @@
 <template>
-  <section class="header-wrapper relative">
-    <div class="header-top">
-      <div class="row">
-        <div class="col-3">
-          <img
-            src="../assets/images/Logo/avadabarbers-logo-x2-200x70.png"
-            alt="logo avada barbers"
-          />
-        </div>
-        <div class="col text-end align-self-center">
-          <i class="fas fa-shopping-cart me-3"></i>
-          <!-- <i class="fas fa-bars"></i> -->
-          <div class="collapsible-menu">
-            <input type="checkbox" id="menu" />
-            <label for="menu"><i class="fas fa-bars"></i></label>
-            <div class="menu-content">
-              <ul>
-                <li><a href="">Home</a></li>
-                <li id="about-us-menu"><a href="#about-us">About Us</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Our Team</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact Us</a></li>
+  <section class="header-wrapper" id="home">
+    <div class="container-fluid position-fixed my-background">
+      <div class="header-top">
+        <div class="row">
+          <div class="col-3">
+            <img
+              src="../assets/images/Logo/avadabarbers-logo-x2-200x70.png"
+              alt="logo avada barbers"
+            />
+          </div>
+          <div class="col align-item-center d-flex justify-content-end">
+            <div>
+              <i class="fas fa-shopping-cart me-3"></i>
+            </div>
+            <div class="">
+              <button
+                class="btn dropdown-toggle position-relative my-index"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <ul id="my-dropdown" class="dropdown-menu">
+                <li v-for="(link, index) in linksNav" :key="index">
+                  <a
+                    id="my-drop-item"
+                    class="dropdown-item"
+                    :href="link.link"
+                    >{{ link.name }}</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -58,6 +67,36 @@
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Header",
+  data: function () {
+    return {
+      linksNav: [
+        {
+          link: "#home",
+          name: "Home",
+        },
+        {
+          link: "#services-link",
+          name: "Services",
+        },
+        {
+          link: "#shop-link",
+          name: "Shop",
+        },
+        {
+          link: "#",
+          name: "Our Team",
+        },
+        {
+          link: "#blog-link",
+          name: "Blog",
+        },
+        {
+          link: "#",
+          name: "Contact Us",
+        },
+      ],
+    };
+  },
   props: {},
 };
 </script>
@@ -82,6 +121,7 @@ section.header-wrapper {
     top: 0;
     left: 50%; */
     line-height: 120px;
+    position: relative;
     /* transform: translateX(-50%); */
     i {
       color: #ffffff;
@@ -93,6 +133,8 @@ section.header-wrapper {
     margin: 0 auto; */
     height: 85%;
     line-height: 85px;
+    position: relative;
+    top: 196px;
     h1 {
       font-size: 5.5rem;
     }
@@ -107,7 +149,7 @@ section.header-wrapper {
     i {
       right: 5px;
       width: 60px;
-      z-index: 3;
+      /*       z-index: 3; */
       padding: 0.5rem;
       font-size: 2rem;
       position: fixed;
@@ -125,78 +167,34 @@ section.header-wrapper {
   }
 }
 
-//? collapse menu plus
-.collapsible-menu {
-  background-color: transparent;
-  display: inline;
+ul#my-dropdown {
+  /* inset: unset !important; */
+  margin: 0px;
+  transform: translate3d(-384.244px, 0px, 0px) !important;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.85);
+  padding-top: 12rem;
 }
-.collapsible-menu ul {
-  list-style-type: none;
-  padding: 0;
+#dropdownMenuButton1 {
+  color: transparent;
 }
-.collapsible-menu li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  justify-content: center;
-  a {
-    text-decoration: none;
-    color: $Ebb;
-    font-size: 1.5rem;
+
+#my-drop-item {
+  color: white;
+  text-align: center;
+
+  font-size: 3rem;
+  &:hover {
+    background-color: rgba(251, 141, 5, 0.5) !important;
   }
 }
-.collapsible-menu label {
-  display: inline;
-  cursor: pointer;
-  /* padding: 10px 0 10px 50px; */
+
+.fas.fa-shopping-cart {
+  margin-top: 49px;
 }
-input#menu {
-  display: none;
+.my-background {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
-.menu-content {
-  max-height: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: $ColdGrey;
-  filter: opacity(0.6);
-  z-index: 3;
-  line-height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* transform: translateY(-50%); */
-}
-/* Toggle Effect */
-input:checked ~ label {
-  /*   background-image: url(../assets/images/Hover/times-solid.svg);
-  color: #ffffff;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 10px;
-  z-index: 3; */
-  /* color: $Driftwood; */
-}
-input:checked ~ .menu-content {
-  max-height: 100vh;
-  max-width: 100vw;
-}
-/* #about-us-menu :hover.menu-content {
-  background-image: url(../assets/images/Header-Jumbo/avadabarbers-homepage-hero-bg.jpg);
-  background-size: cover;
-} */
-.collapsible-menu li:hover a {
-  color: $Driftwood;
-}
-/* .collapsible-menu li#about-us-men:hover ~ .menu-content {
-  background-image: url(../assets/images/Header-Jumbo/avadabarbers-homepage-hero-bg.jpg);
-  background-size: cover;
-  height: 100%;
-  background-color: transparent;
-} */
 </style>

@@ -9,11 +9,11 @@
     <Jumbotron />
     <!-- Awarding  Pro Barbers  -->
     <Main />
-    <!-- services 
-    static obj 
-    and 
+    <!-- services
+    static obj
+    and
     products
-    a single component? try it 
+    a single component? try it
     + product months featured absolut?  -->
     <!-- reviews  and Posts -->
     <Footer />

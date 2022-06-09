@@ -54,7 +54,7 @@
 
 <script>
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
+  // eslint-disable-next-line
   name: "Reviews",
   data: function () {
     return {

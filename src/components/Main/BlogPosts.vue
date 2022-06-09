@@ -1,5 +1,5 @@
 <template>
-  <section class="blog-posts">
+  <section id="blog-link" class="blog-posts">
     <svg
       class="fusion-big-triangle-candy mb-4 testing-rotate"
       xmlns="http://www.w3.org/2000/svg"

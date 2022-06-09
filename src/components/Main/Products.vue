@@ -1,6 +1,6 @@
 <template>
   <!-- <section class="container-fluid"> -->
-  <section class="products">
+  <section id="shop-link" class="products">
     <div class="centralize-container">
       <div class="row centralize-paragraph">
         <div class="col text-paragraph">
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
+  // eslint-disable-next-line
   name: "Products",
   data: function () {
     return {
